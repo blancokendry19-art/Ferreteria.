@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Carrito | ConstruMax</title>
+
+    <link rel="stylesheet" href="carrito.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                <h2>ConstruMax</h2>
+            </div>
+
+            <ul class="nav-links">
+
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="herramientas.html">Herramientas</a></li>
+                <li><a href="construccion.html">Construcción</a></li>
+                <li><a href="electricidad.html">Electricidad</a></li>
+                <li><a href="pinturas.html">Pinturas</a></li>
+
+                <li>
+                    <a href="carrito.html">
+                        🛒 Carrito (<span id="contador-carrito">0</span>)
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html#contacto">
+                        Contacto
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <!-- CARRITO -->
+
+    <section class="carrito">
+
+        <h1 class="titulo-carrito">
+            Mi Carrito De Compras
+        </h1>
+
+        <p class="subtitulo">
+            Aquí aparecerán los productos que agregues desde cualquier página.
+        </p>
+
+        <div id="productos-carrito">
+
+            <!-- EL JS INSERTARÁ LOS PRODUCTOS AQUÍ -->
+
+        </div>
+
+        <div class="resumen-carrito">
+
+            <h2 id="total">
+                Total: $0
+            </h2>
+
+            <button id="vaciar-carrito">
+                Vaciar Carrito
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h2>ConstruMax</h2>
+
+        <p>
+            Tu ferretería de confianza.
+        </p>
+
+        <div class="footer-info">
+
+            <p>📍 Managua, Nicaragua</p>
+            <p>📞 +505 7821-1431</p>
+            <p>✉️ contacto@construmax.com</p>
+
+        </div>
+
+    </footer>
+
+    <!-- JAVASCRIPT -->
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

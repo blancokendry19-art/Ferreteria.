@@ -1,0 +1,460 @@
+/* RESET */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+
+body{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    padding-top: 80px;
+}
+
+body::before{
+    content: "";
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-image:
+    url("https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+
+    filter: blur(8px);
+    transform: scale(1.1);
+
+    z-index: -2;
+}
+
+body::after{
+    content: "";
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.55);
+
+    z-index: -1;
+}
+
+/* NAVBAR */
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 10%;
+
+    background-color: #111;
+
+    position: fixed;
+    width: 100%;
+    top: 0;
+
+    z-index: 1000;
+}
+
+.logo h2{
+    color: #ff9100;
+}
+
+.nav-links{
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a{
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover{
+    color: #ff9100;
+}
+
+/* HERO */
+
+.hero{
+
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    background-image:
+    url("https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay{
+
+    background: rgba(0,0,0,0.65);
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 0 10%;
+}
+
+.overlay h1{
+    color: white;
+    font-size: 4rem;
+    max-width: 700px;
+}
+
+.overlay p{
+    color: white;
+    margin-top: 20px;
+    max-width: 600px;
+    line-height: 1.7;
+}
+
+/* TITULOS */
+
+.titulo-seccion{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+/* PRODUCTOS */
+
+.productos{
+    padding: 100px 10%;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 30px;
+}
+
+/* TARJETAS */
+
+.card-producto{
+
+    background-color: white;
+
+    border-radius: 20px;
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+
+    transition: 0.3s;
+
+    padding-bottom: 20px;
+}
+
+.card-producto:hover{
+    transform: translateY(-10px);
+}
+
+.card-producto img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-producto h3{
+    padding: 15px;
+    color: #222;
+}
+
+.card-producto p{
+    padding: 0 15px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.precio{
+    color: #ff9100 !important;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.card-producto button{
+
+    margin-left: 15px;
+
+    padding: 12px 18px;
+
+    border: none;
+    border-radius: 10px;
+
+    background-color: #855E42;
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.card-producto button:hover{
+    background-color: #5f3f2a;
+}
+
+/* CATEGORIAS */
+
+.categorias{
+    padding: 100px 10%;
+    background-color: rgba(255,255,255,0.08);
+}
+
+.categorias-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 25px;
+}
+
+.categoria-link{
+    text-decoration: none;
+}
+
+.categoria-card{
+
+    background-color: #111;
+    color: white;
+
+    padding: 40px 20px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.categoria-card:hover{
+    transform: scale(1.05);
+    background-color: #ff9100;
+}
+
+/* PROMOCIONES */
+
+.promociones{
+    padding: 100px 10%;
+}
+
+.promo-box{
+
+    background: linear-gradient(135deg,#111,#444);
+
+    color: white;
+
+    padding: 60px;
+
+    border-radius: 20px;
+
+    text-align: center;
+}
+
+.promo-box h2{
+    font-size: 2.5rem;
+}
+
+.promo-box p{
+    margin: 20px 0;
+}
+
+.promo-box button{
+
+    padding: 15px 25px;
+
+    border: none;
+    border-radius: 10px;
+
+    background-color: #ff9100;
+    color: white;
+
+    cursor: pointer;
+}
+
+/* TESTIMONIOS */
+
+.testimonios{
+    padding: 100px 10%;
+}
+
+.form-opinion{
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+
+    max-width: 600px;
+
+    margin: 0 auto 50px;
+}
+
+.form-opinion input,
+.form-opinion textarea{
+
+    padding: 15px;
+
+    border-radius: 10px;
+    border: 1px solid #ccc;
+
+    font-size: 1rem;
+}
+
+.form-opinion textarea{
+    height: 120px;
+    resize: none;
+}
+
+.form-opinion button{
+
+    padding: 15px;
+
+    border: none;
+    border-radius: 10px;
+
+    background-color: #ff9100;
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.form-opinion button:hover{
+    background-color: #e67e00;
+}
+
+#contenedor-opiniones{
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+
+    gap: 25px;
+}
+
+.testimonio{
+
+    background-color: white;
+    color: #222;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+/* CONTACTO */
+
+.contacto{
+    padding: 100px 10%;
+}
+
+form{
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+
+    max-width: 600px;
+
+    margin: auto;
+}
+
+input,
+textarea{
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    border: 1px solid #ccc;
+}
+
+textarea{
+    resize: none;
+    height: 150px;
+}
+
+form button{
+
+    padding: 15px;
+
+    border: none;
+    border-radius: 10px;
+
+    background-color: #111;
+    color: white;
+
+    cursor: pointer;
+}
+
+/* FOOTER */
+
+footer{
+
+    background-color: #111;
+    color: white;
+
+    padding: 50px 10%;
+
+    text-align: center;
+}
+
+.footer-info{
+    margin-top: 20px;
+    line-height: 2;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .overlay h1{
+        font-size: 2.5rem;
+    }
+
+    .overlay p{
+        font-size: 0.95rem;
+    }
+
+    .titulo-seccion{
+        font-size: 2rem;
+    }
+
+    .promo-box{
+        padding: 40px 20px;
+    }
+}
